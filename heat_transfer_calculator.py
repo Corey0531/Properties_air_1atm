@@ -43,17 +43,17 @@ def calculate_Nu():
         messagebox.showerror("錯誤", "請輸入有效的數字")
         return
 
-    # 這裡寫你的計算公式
+    #計算公式
     Nu_in = (0.62 * (Re ** 0.5) * (Pr ** (1/3)) / (1 + (0.4 / Pr) ** (2/3)) ** (1/4))
     Nu = 0.3 + Nu_in * (1 + (Re / 282000) ** (5/8)) ** (4/5)
 
     output_Nu_var.set(f"計算結果 Nu_cyl = {Nu:.4g}")
 
 root = tk.Tk()
-root.title("1 atm 空氣數據 & Nu 計算器")
+root.title("1 atm 空氣性質 & Nu 計算器")
 root.geometry("500x450")
 
-# --- 空氣性質查表區塊 ---
+#空氣性質查表區塊
 frame_air = tk.LabelFrame(root, text="空氣性質查表 (1 atm)", padx=10, pady=10)
 frame_air.pack(fill="both", expand=True, padx=10, pady=5)
 
@@ -66,7 +66,7 @@ tk.Button(frame_air, text="查詢", command=query_air_properties).pack(pady=2)
 output_air = tk.Text(frame_air, height=10, width=50)
 output_air.pack()
 
-# --- Nu 計算區塊 ---
+#Nu 計算區塊
 frame_nu = tk.LabelFrame(root, text="Nu 計算(cylinders)", padx=10, pady=10)
 frame_nu.pack(fill="both", expand=True, padx=10, pady=5)
 
