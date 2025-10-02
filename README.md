@@ -13,4 +13,4 @@ Some of the scripts may contain bugs or incomplete logic.
 
 ## Additional Information
 For more details, please refer to the following documentation:  
-🔗 [Project Explanation](https://youtu.be/vKB2Lg-IM3I?si=VeW5U2MJo5LzlT4W)
+🔗 [Project Explanation]()
